@@ -21,11 +21,10 @@ def _extraction_payload() -> dict:
                 "heading": None,
                 "text": GROUNDED_QUOTE,
                 "evidence": {"page_start": 1, "page_end": 1, "quote": GROUNDED_QUOTE},
-                "model_confidence": 0.9,
             },
             {
                 "id": "c2",
-                "type": "penalty",
+                "type": "obligation",
                 "heading": None,
                 "text": "a clause that was never actually in the document",
                 "evidence": {
@@ -33,7 +32,15 @@ def _extraction_payload() -> dict:
                     "page_end": 1,
                     "quote": "a clause that was never actually in the document",
                 },
-                "model_confidence": 0.95,
+            },
+            {
+                # verbatim and correctly cited, but high-impact -- never
+                # auto-publishes now that there is no score to justify it
+                "id": "c3",
+                "type": "penalty",
+                "heading": None,
+                "text": GROUNDED_QUOTE,
+                "evidence": {"page_start": 1, "page_end": 1, "quote": GROUNDED_QUOTE},
             },
         ],
         "entities": [
@@ -44,7 +51,6 @@ def _extraction_payload() -> dict:
                 "text": GROUNDED_QUOTE,
                 "normalized_value": None,
                 "evidence": {"page_start": 1, "page_end": 1, "quote": GROUNDED_QUOTE},
-                "model_confidence": 0.9,
             }
         ],
     }
@@ -58,10 +64,13 @@ def test_pipeline_wires_ingest_extract_and_grounding_together():
     assert result.document.page_count == 8
     assert result.document.model == "stub-model"
 
+    # one of each outcome, so the whole triage table is exercised end-to-end
     by_id = {c.id: c for c in result.clauses}
     assert by_id["c1"].review_flag == "auto_publish"
-    assert by_id["c2"].review_flag == "needs_review"
+    assert by_id["c2"].review_flag == "rejected"
     assert "ungrounded_span" in by_id["c2"].review_reasons
+    assert by_id["c3"].review_flag == "needs_review"
+    assert "high_impact_type" in by_id["c3"].review_reasons
 
     assert result.entities[0].review_flag == "auto_publish"
 

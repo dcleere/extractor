@@ -1,0 +1,423 @@
+{
+  "document": {
+    "id": "9f6aa3ff-2f3d-4518-9f15-f9bd7e9606f3",
+    "filename": "sample_regulation.html",
+    "page_count": 7,
+    "source_hash": "c4a59c631bb59b0eb4c9820e5e9841e43d356e0c646f7ebae9a78d14af35d682",
+    "extracted_at": "2026-08-24T15:59:52.118413Z",
+    "model": "claude-sonnet-5",
+    "prompt_version": "v2"
+  },
+  "clauses": [
+    {
+      "id": "c1",
+      "type": "definition",
+      "heading": "1. Definitions",
+      "text": "\"Battery Pack\" means a set of interconnected portable\nelectrochemical cells with a rated energy capacity exceeding 2 kWh, designed to be\nremovable by the end user without the use of tools.",
+      "evidence": {
+        "page_start": 2,
+        "page_end": 2,
+        "quote": "\"Battery Pack\" means a set of interconnected portable\nelectrochemical cells with a rated energy capacity exceeding 2 kWh, designed to be\nremovable by the end user without the use of tools."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c2",
+      "type": "definition",
+      "heading": "1. Definitions",
+      "text": "\"Placing on the Market\" means the first making available of a\nBattery Pack on the Union market.",
+      "evidence": {
+        "page_start": 2,
+        "page_end": 2,
+        "quote": "\"Placing on the Market\" means the first making available of a\nBattery Pack on the Union market."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c3",
+      "type": "definition",
+      "heading": "1. Definitions",
+      "text": "\"Competent Authority\" means the national body designated by a\nMember State to monitor compliance with this Regulation, coordinated at Union level\nby the European Battery Safety Authority.",
+      "evidence": {
+        "page_start": 2,
+        "page_end": 2,
+        "quote": "\"Competent Authority\" means the national body designated by a\nMember State to monitor compliance with this Regulation, coordinated at Union level\nby the European Battery Safety Authority."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c4",
+      "type": "scope",
+      "heading": "2. Scope",
+      "text": "This Regulation applies to Battery Packs placed on the market within the European\nUnion on or after the effective date set out in Section 6, including those\nincorporated into portable consumer electronics and light electric vehicles.",
+      "evidence": {
+        "page_start": 3,
+        "page_end": 3,
+        "quote": "This Regulation applies to Battery Packs placed on the market within the European\nUnion on or after the effective date set out in Section 6, including those\nincorporated into portable consumer electronics and light electric vehicles."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c5",
+      "type": "obligation",
+      "heading": "3. Obligations",
+      "text": "Manufacturers shall ensure that every Battery Pack placed on the market carries a\nlabel disclosing rated capacity, cell chemistry, and a QR code linking to a digital\nsafety data sheet, in accordance with the technical requirements of\nRegulation (EU) 2023/1542.",
+      "evidence": {
+        "page_start": 4,
+        "page_end": 4,
+        "quote": "Manufacturers shall ensure that every Battery Pack placed on the market carries a\nlabel disclosing rated capacity, cell chemistry, and a QR code linking to a digital\nsafety data sheet, in accordance with the technical requirements of\nRegulation (EU) 2023/1542."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c6",
+      "type": "obligation",
+      "heading": "3. Obligations",
+      "text": "Importers shall verify, before placing a Battery Pack on the market, that the\nmanufacturer has carried out the applicable conformity assessment procedure and shall\nretain supporting documentation for a period of ten years.",
+      "evidence": {
+        "page_start": 4,
+        "page_end": 4,
+        "quote": "Importers shall verify, before placing a Battery Pack on the market, that the\nmanufacturer has carried out the applicable conformity assessment procedure and shall\nretain supporting documentation for a period of ten years."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c7",
+      "type": "obligation",
+      "heading": "3. Obligations",
+      "text": "Distributors shall notify their Competent Authority without undue delay upon\nbecoming aware that a Battery Pack presents a risk to consumer safety.",
+      "evidence": {
+        "page_start": 4,
+        "page_end": 4,
+        "quote": "Distributors shall notify their Competent Authority without undue delay upon\nbecoming aware that a Battery Pack presents a risk to consumer safety."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c8",
+      "type": "exemption",
+      "heading": "4. Exemptions",
+      "text": "This Regulation does not apply to Battery Packs that are: incorporated exclusively into medical devices regulated under\nRegulation (EU) 2017/745; manufactured solely for export outside the European Union and not placed on the\nUnion market; supplied in quantities of fewer than 500 units per year by a single manufacturer\nfor research and development purposes.",
+      "evidence": {
+        "page_start": 5,
+        "page_end": 5,
+        "quote": "This Regulation does not apply to Battery Packs that are: incorporated exclusively into medical devices regulated under\nRegulation (EU) 2017/745; manufactured solely for export outside the European Union and not placed on the\nUnion market; supplied in quantities of fewer than 500 units per year by a single manufacturer\nfor research and development purposes."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c9",
+      "type": "penalty",
+      "heading": "5. Penalties",
+      "text": "A Competent Authority may impose an administrative fine of up to\n€500,000 or 2% of the undertaking's total annual turnover, whichever is higher,\non any manufacturer, importer, or distributor found to be in material non-compliance\nwith Sections 3 or 4 of this Regulation.",
+      "evidence": {
+        "page_start": 6,
+        "page_end": 6,
+        "quote": "A Competent Authority may impose an administrative fine of up to\n€500,000 or 2% of the undertaking's total annual turnover, whichever is higher,\non any manufacturer, importer, or distributor found to be in material non-compliance\nwith Sections 3 or 4 of this Regulation."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "needs_review",
+      "review_reasons": [
+        "high_impact_type"
+      ]
+    },
+    {
+      "id": "c10",
+      "type": "penalty",
+      "heading": "5. Penalties",
+      "text": "Persistent non-compliance following a first administrative fine may result in\nsuspension of the undertaking's authorization to place Battery Packs on the market in\nthe European Union.",
+      "evidence": {
+        "page_start": 6,
+        "page_end": 6,
+        "quote": "Persistent non-compliance following a first administrative fine may result in\nsuspension of the undertaking's authorization to place Battery Packs on the market in\nthe European Union."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "needs_review",
+      "review_reasons": [
+        "high_impact_type"
+      ]
+    },
+    {
+      "id": "c11",
+      "type": "effective_date",
+      "heading": "6. Effective Date",
+      "text": "This Regulation shall enter into force on 1 January 2027.",
+      "evidence": {
+        "page_start": 7,
+        "page_end": 7,
+        "quote": "This Regulation shall enter into force on 1 January 2027."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "needs_review",
+      "review_reasons": [
+        "high_impact_type"
+      ]
+    },
+    {
+      "id": "c12",
+      "type": "obligation",
+      "heading": "6. Effective Date",
+      "text": "Undertakings already\nplacing Battery Packs on the market as of the date of publication shall have until\n1 July 2027 to achieve full compliance with the labelling requirements of Section 3.",
+      "evidence": {
+        "page_start": 7,
+        "page_end": 7,
+        "quote": "Undertakings already\nplacing Battery Packs on the market as of the date of publication shall have until\n1 July 2027 to achieve full compliance with the labelling requirements of Section 3."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    }
+  ],
+  "entities": [
+    {
+      "id": "e1",
+      "clause_id": "c1",
+      "type": "product_category",
+      "text": "Battery Pack",
+      "normalized_value": null,
+      "evidence": {
+        "page_start": 2,
+        "page_end": 2,
+        "quote": "\"Battery Pack\""
+      },
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "e2",
+      "clause_id": "c1",
+      "type": "monetary_threshold",
+      "text": "exceeding 2 kWh",
+      "normalized_value": null,
+      "evidence": {
+        "page_start": 2,
+        "page_end": 2,
+        "quote": "exceeding 2 kWh"
+      },
+      "grounded": true,
+      "review_flag": "needs_review",
+      "review_reasons": [
+        "high_impact_type"
+      ]
+    },
+    {
+      "id": "e3",
+      "clause_id": "c3",
+      "type": "organisation",
+      "text": "European Battery Safety Authority",
+      "normalized_value": null,
+      "evidence": {
+        "page_start": 2,
+        "page_end": 2,
+        "quote": "European Battery Safety Authority"
+      },
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "e4",
+      "clause_id": "c4",
+      "type": "location",
+      "text": "European\nUnion",
+      "normalized_value": null,
+      "evidence": {
+        "page_start": 3,
+        "page_end": 3,
+        "quote": "European\nUnion"
+      },
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "e5",
+      "clause_id": "c5",
+      "type": "regulation_reference",
+      "text": "Regulation (EU) 2023/1542",
+      "normalized_value": null,
+      "evidence": {
+        "page_start": 4,
+        "page_end": 4,
+        "quote": "Regulation (EU) 2023/1542"
+      },
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "e6",
+      "clause_id": "c6",
+      "type": "date",
+      "text": "ten years",
+      "normalized_value": null,
+      "evidence": {
+        "page_start": 4,
+        "page_end": 4,
+        "quote": "a period of ten years"
+      },
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "e7",
+      "clause_id": "c8",
+      "type": "regulation_reference",
+      "text": "Regulation (EU) 2017/745",
+      "normalized_value": null,
+      "evidence": {
+        "page_start": 5,
+        "page_end": 5,
+        "quote": "Regulation (EU) 2017/745"
+      },
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "e8",
+      "clause_id": "c8",
+      "type": "monetary_threshold",
+      "text": "fewer than 500 units per year",
+      "normalized_value": null,
+      "evidence": {
+        "page_start": 5,
+        "page_end": 5,
+        "quote": "fewer than 500 units per year"
+      },
+      "grounded": true,
+      "review_flag": "needs_review",
+      "review_reasons": [
+        "high_impact_type"
+      ]
+    },
+    {
+      "id": "e9",
+      "clause_id": "c9",
+      "type": "monetary_threshold",
+      "text": "€500,000",
+      "normalized_value": "500000 EUR",
+      "evidence": {
+        "page_start": 6,
+        "page_end": 6,
+        "quote": "€500,000"
+      },
+      "grounded": true,
+      "review_flag": "needs_review",
+      "review_reasons": [
+        "high_impact_type"
+      ]
+    },
+    {
+      "id": "e10",
+      "clause_id": "c9",
+      "type": "monetary_threshold",
+      "text": "2% of the undertaking's total annual turnover",
+      "normalized_value": null,
+      "evidence": {
+        "page_start": 6,
+        "page_end": 6,
+        "quote": "2% of the undertaking's total annual turnover"
+      },
+      "grounded": true,
+      "review_flag": "needs_review",
+      "review_reasons": [
+        "high_impact_type"
+      ]
+    },
+    {
+      "id": "e11",
+      "clause_id": "c11",
+      "type": "date",
+      "text": "1 January 2027",
+      "normalized_value": "2027-01-01",
+      "evidence": {
+        "page_start": 7,
+        "page_end": 7,
+        "quote": "1 January 2027"
+      },
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "e12",
+      "clause_id": "c12",
+      "type": "date",
+      "text": "1 July 2027",
+      "normalized_value": "2027-07-01",
+      "evidence": {
+        "page_start": 7,
+        "page_end": 7,
+        "quote": "1 July 2027"
+      },
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "e13",
+      "clause_id": "c12",
+      "type": "organisation",
+      "text": "European Battery Safety Authority",
+      "normalized_value": null,
+      "evidence": {
+        "page_start": 7,
+        "page_end": 7,
+        "quote": "European Battery Safety Authority"
+      },
+      "grounded": false,
+      "review_flag": "needs_review",
+      "review_reasons": [
+        "not_found_in_parent_clause"
+      ]
+    },
+    {
+      "id": "e14",
+      "clause_id": "c12",
+      "type": "location",
+      "text": "Ireland",
+      "normalized_value": null,
+      "evidence": {
+        "page_start": 7,
+        "page_end": 7,
+        "quote": "Ireland"
+      },
+      "grounded": false,
+      "review_flag": "needs_review",
+      "review_reasons": [
+        "not_found_in_parent_clause"
+      ]
+    }
+  ]
+}

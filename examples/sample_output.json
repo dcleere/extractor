@@ -1,0 +1,943 @@
+{
+  "document": {
+    "id": "b4863264-4b68-4790-954e-e8d943129103",
+    "filename": "sample_doc.pdf",
+    "page_count": 8,
+    "source_hash": "d1be194cb28cbeed29fe200e28192ebd20299ebb0fb64ec48e245cb82914d7cd",
+    "extracted_at": "2026-08-24T15:59:22.857074Z",
+    "model": "claude-sonnet-5",
+    "prompt_version": "v2"
+  },
+  "clauses": [
+    {
+      "id": "c1",
+      "type": "other",
+      "heading": "INTRODUCTION",
+      "text": "This document defines the Criteria for the product registration under the Emirates \nConformity Assessment Scheme (ECAS) being implemented by the Emirates Authority \nfor Standardization and Metrology (ESMA). The requirements defined in this document \nare issued for the information, guidance and compliance of Manufacturers and Traders \nintending to promote and sell their products in the United Arab Emirates.",
+      "evidence": {
+        "page_start": 2,
+        "page_end": 2,
+        "quote": "This document defines the Criteria for the product registration under the Emirates \nConformity Assessment Scheme (ECAS) being implemented by the Emirates Authority \nfor Standardization and Metrology (ESMA). The requirements defined in this document \nare issued for the information, guidance and compliance of Manufacturers and Traders \nintending to promote and sell their products in the United Arab Emirates."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c2",
+      "type": "obligation",
+      "heading": "OBJECTIVE",
+      "text": "The United Arab Emirates shall take all appropriate measures to ensure that electrical \nequipment may be placed on the market or put into service only if, having been constructed \nin accordance with good engineering practices in safety matters prevailing in the \nInternational Community, it does not endanger the safety of persons, domestic animals or \nproperty when properly installed and maintained and used in applications for which it was \nmade.",
+      "evidence": {
+        "page_start": 2,
+        "page_end": 2,
+        "quote": "The United Arab Emirates shall take all appropriate measures to ensure that electrical \nequipment may be placed on the market or put into service only if, having been constructed \nin accordance with good engineering practices in safety matters prevailing in the \nInternational Community, it does not endanger the safety of persons, domestic animals or \nproperty when properly installed and maintained and used in applications for which it was \nmade."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c3",
+      "type": "obligation",
+      "heading": "OBJECTIVE",
+      "text": "These provisions constitute the essential requirements of the Emirate Conformity \nAssessment Scheme  rules. Before being placed on the market or put into service, the \nelectrical equipment must meet these requirements.",
+      "evidence": {
+        "page_start": 2,
+        "page_end": 2,
+        "quote": "These provisions constitute the essential requirements of the Emirate Conformity \nAssessment Scheme  rules. Before being placed on the market or put into service, the \nelectrical equipment must meet these requirements."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c4",
+      "type": "obligation",
+      "heading": "2.1 The technical requirements",
+      "text": "The electrical equipment shall be so constructed in accordance with good engineering \npractices concerning safety. The technical requirements of equipment meeting these safety \npractices are specified in IEC Standards, UAE Standards or other relevant standards and \ntechnical documents. The principal elements of safety objectives that the electrical \nequipment must meet are listed in Annex I.",
+      "evidence": {
+        "page_start": 2,
+        "page_end": 2,
+        "quote": "The electrical equipment shall be so constructed in accordance with good engineering \npractices concerning safety. The technical requirements of equipment meeting these safety \npractices are specified in IEC Standards, UAE Standards or other relevant standards and \ntechnical documents. The principal elements of safety objectives that the electrical \nequipment must meet are listed in Annex I."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c5",
+      "type": "obligation",
+      "heading": "2.2 The Administrative requirements",
+      "text": "Compulsory procedures and documents implemented by the manufacturer or his authorized \nrepresentative are imposed by ESMA (e.g. conformity assessment procedures, marking on \nthe product, technical files, declaration of conformity, and instructions for use if relevant).",
+      "evidence": {
+        "page_start": 2,
+        "page_end": 2,
+        "quote": "Compulsory procedures and documents implemented by the manufacturer or his authorized \nrepresentative are imposed by ESMA (e.g. conformity assessment procedures, marking on \nthe product, technical files, declaration of conformity, and instructions for use if relevant)."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c6",
+      "type": "scope",
+      "heading": "3.1 Products Covered by this Specific Requirement",
+      "text": "3.1.1 This document prescribes the requirement for the safety of electrical equipment \ndesignation for used with input voltage rating between 50 and 1000 volts for alternating \ncurrent and between 75 volts to 1500 volts for direct current. The electrical equipment \nunder this scope is called “Low Voltage Equipment.”",
+      "evidence": {
+        "page_start": 2,
+        "page_end": 3,
+        "quote": "3.1.1 This document prescribes the requirement for the safety of electrical equipment \ndesignation for used with input voltage rating between 50 and 1000 volts for alternating\ncurrent and between 75 volts to 1500 volts for direct current. The electrical equipment \nunder this scope is called “Low Voltage Equipment.”"
+      },
+      "ocr_derived": false,
+      "grounded": false,
+      "review_flag": "rejected",
+      "review_reasons": [
+        "ungrounded_span"
+      ]
+    },
+    {
+      "id": "c7",
+      "type": "exemption",
+      "heading": "3.1.2",
+      "text": "3.1.2 This document shall not apply to the products excluded by UAE / IEC 60335-1. :",
+      "evidence": {
+        "page_start": 3,
+        "page_end": 3,
+        "quote": "3.1.2 This document shall not apply to the products excluded by UAE / IEC 60335-1. :"
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c8",
+      "type": "definition",
+      "heading": "5.1",
+      "text": "5.1 ESMA – The Emirates Authority for Standardization and Metrology. The UAE’s \nStandards body as mandated by Federal Law No. 28. It is the Competent \ngovernment entity responsible for implementing this Specific Requirement for low \nvoltage appliances.",
+      "evidence": {
+        "page_start": 3,
+        "page_end": 3,
+        "quote": "5.1 ESMA – The Emirates Authority for Standardization and Metrology. The UAE’s \nStandards body as mandated by Federal Law No. 28. It is the Competent \ngovernment entity responsible for implementing this Specific Requirement for low \nvoltage appliances."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c9",
+      "type": "definition",
+      "heading": "5.2",
+      "text": "5.2   Low voltage equipment (LVE) also referred to as “Equipment”: All electrical or \nelectronic equipment including components, parts, finished products, systems and \ninstallations, with input voltage rating as indicated in item 3.1.",
+      "evidence": {
+        "page_start": 3,
+        "page_end": 3,
+        "quote": "5.2   Low voltage equipment (LVE) also referred to as “Equipment”: All electrical or \nelectronic equipment including components, parts, finished products, systems and \ninstallations, with input voltage rating as indicated in item 3.1."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c10",
+      "type": "definition",
+      "heading": "5.3",
+      "text": "5.3 Approved Supplier – a manufacturer and/or trader responsible for the product \ncovered by this Specific Requirement.",
+      "evidence": {
+        "page_start": 3,
+        "page_end": 3,
+        "quote": "5.3 Approved Supplier – a manufacturer and/or trader responsible for the product \ncovered by this Specific Requirement."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c11",
+      "type": "definition",
+      "heading": "5.4",
+      "text": "5.4 Conformity Assessment -  any activity to determine directly or indirectly, that a \nprocess, product or service meets relevant standards and fulfills relevant \nrequirements",
+      "evidence": {
+        "page_start": 3,
+        "page_end": 3,
+        "quote": "5.4 Conformity Assessment -  any activity to determine directly or indirectly, that a \nprocess, product or service meets relevant standards and fulfills relevant \nrequirements"
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c12",
+      "type": "definition",
+      "heading": "5.5",
+      "text": "5.5 ECAS Certificate of Conformity – a certificate of conformity issued to the \nproduct complying to a relevant UAE Standard/s or to any ESMA recognized \nNational/Regional and International Standards.",
+      "evidence": {
+        "page_start": 3,
+        "page_end": 3,
+        "quote": "5.5 ECAS Certificate of Conformity – a certificate of conformity issued to the \nproduct complying to a relevant UAE Standard/s or to any ESMA recognized \nNational/Regional and International Standards."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c13",
+      "type": "definition",
+      "heading": "5.6",
+      "text": "5.6 ECAS – Emirates Conformity Assessment Systems",
+      "evidence": {
+        "page_start": 4,
+        "page_end": 4,
+        "quote": "5.6 ECAS – Emirates Conformity Assessment Systems"
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c14",
+      "type": "definition",
+      "heading": "5.7",
+      "text": "5.7  Specific Requirements - a document specifying the set of rules in order for a \nproduct to be registered under ECAS.",
+      "evidence": {
+        "page_start": 4,
+        "page_end": 4,
+        "quote": "5.7  Specific Requirements - a document specifying the set of rules in order for a \nproduct to be registered under ECAS."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c15",
+      "type": "definition",
+      "heading": "5.8",
+      "text": "5.8  Initial Testing - refers to the verification of product conformance to a specified \nProduct Standards and/or Specific Requirements prior to the registration of \nProduct.",
+      "evidence": {
+        "page_start": 4,
+        "page_end": 4,
+        "quote": "5.8  Initial Testing - refers to the verification of product conformance to a specified \nProduct Standards and/or Specific Requirements prior to the registration of \nProduct."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c16",
+      "type": "definition",
+      "heading": "5.9",
+      "text": "5.9  Recognized Conformity Assessment Body- a competent body recognized by \nESMA to carry out factory inspection and/or testing of product.",
+      "evidence": {
+        "page_start": 4,
+        "page_end": 4,
+        "quote": "5.9  Recognized Conformity Assessment Body- a competent body recognized by \nESMA to carry out factory inspection and/or testing of product."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c17",
+      "type": "definition",
+      "heading": "5.10",
+      "text": "5.10 Approved Standard – refers to a Product Standard approved by ESMA to be \nused in verifying conformity of a product.",
+      "evidence": {
+        "page_start": 4,
+        "page_end": 4,
+        "quote": "5.10 Approved Standard – refers to a Product Standard approved by ESMA to be \nused in verifying conformity of a product."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c18",
+      "type": "obligation",
+      "heading": "6.1",
+      "text": "6.1 Compliance of relevant components to be used in manufacturing electrical low \nvoltage equipment to relevant UAE / IEC Standard. Clients are required to submit \nManufacturer’s Declaration of Conformity and Test Report that to comply with \nthis requirement.",
+      "evidence": {
+        "page_start": 4,
+        "page_end": 4,
+        "quote": "6.1 Compliance of relevant components to be used in manufacturing electrical low \nvoltage equipment to relevant UAE / IEC Standard. Clients are required to submit \nManufacturer’s Declaration of Conformity and Test Report that to comply with \nthis requirement."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c19",
+      "type": "obligation",
+      "heading": "6.4",
+      "text": "6.4  Compliance of the equipment plugs to: \n\n6.4.1 BS 1363. Plugs with earth and fuse for Class I Appliances \n\n6.4.2 BS 1363 Plugs with a dummy plastic earth pin for Class II Appliances \n\n6.4.3 BS 546 Plug Configurations for 15 Ampere Appliances.",
+      "evidence": {
+        "page_start": 4,
+        "page_end": 4,
+        "quote": "6.4 Compliance of the equipment plugs to: \n\n6.4.1 BS 1363. Plugs with earth and fuse for Class I Appliances \n\n6.4.2 BS 1363 Plugs with a dummy plastic earth pin for Class II Appliances \n\n6.4.3 BS 546 Plug Configurations for 15 Ampere Appliances."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c20",
+      "type": "obligation",
+      "heading": "6.5",
+      "text": "6.5 Users Manual in Arabic and English language.",
+      "evidence": {
+        "page_start": 4,
+        "page_end": 4,
+        "quote": "6.5 Users Manual in Arabic and English language."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c21",
+      "type": "obligation",
+      "heading": "6.6",
+      "text": "6.6 Country of Origin marking on the product",
+      "evidence": {
+        "page_start": 4,
+        "page_end": 4,
+        "quote": "6.6 Country of Origin marking on the product"
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c22",
+      "type": "obligation",
+      "heading": "6.7",
+      "text": "6.7 Where applicable, compliance of the product to Tropical Climatic Conditions",
+      "evidence": {
+        "page_start": 4,
+        "page_end": 4,
+        "quote": "6.7 Where applicable, compliance of the product to Tropical Climatic Conditions"
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c23",
+      "type": "obligation",
+      "heading": "7.1.1",
+      "text": "7.1.1 Manufacturers / Traders shall submit a filled ECAS application form together \nwith the following: \n\n7.1.1.1 Manufacturer’s / traders Declaration of Conformity for components and \nproducts \n\n7.1.1.2  Technical File or technical documentation \n\n7.1.1.3  List of components used and their specifications. \n\n7.1.1.4 Test Reports for major components used. \n\n7.1.1.5 Valid Industry License \n\n7.1.1.6 Proof of Exclusive Distributorship from the manufacturer in case the applicant \nis a trader or an agent.",
+      "evidence": {
+        "page_start": 5,
+        "page_end": 5,
+        "quote": "7.1.1 Manufacturers / Traders shall submit a filled ECAS application form together \nwith the following: \n\n7.1.1.1 Manufacturer’s / traders Declaration of Conformity for components and \nproducts \n\n7.1.1.2  Technical File or technical documentation \n\n7.1.1.3  List of components used and their specifications. \n\n7.1.1.4 Test Reports for major components used. \n\n7.1.1.5 Valid Industry License \n\n7.1.1.6 Proof of Exclusive Distributorship from the manufacturer in case the applicant \nis a trader or an agent."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c24",
+      "type": "obligation",
+      "heading": "7.1.2-7.1.5",
+      "text": "7.1.2 Payment of Applicable Fees  \n\n7.1.3 Location Map of the Factory and/or warehouse where the product is stored. \n\n7.1.4 Exclusive distributorship from the manufacturer for the trader. \n\n7.1.5 Product Samples",
+      "evidence": {
+        "page_start": 5,
+        "page_end": 5,
+        "quote": "7.1.2 Payment of Applicable Fees  \n\n7.1.3 Location Map of the Factory and/or warehouse where the product is stored. \n\n7.1.4 Exclusive distributorship from the manufacturer for the trader. \n\n7.1.5 Product Samples"
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c25",
+      "type": "obligation",
+      "heading": "8.1",
+      "text": "8.1 Upon the acceptance of the Application, Product shall be evaluated according to \na relevant conformity assessment scheme which is written in clause no. 6 of \nECAS General Requirements.",
+      "evidence": {
+        "page_start": 5,
+        "page_end": 5,
+        "quote": "8.1 Upon the acceptance of the Application, Product shall be evaluated according to \na relevant conformity assessment scheme which is written in clause no. 6 of \nECAS General Requirements."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c26",
+      "type": "obligation",
+      "heading": "8.5",
+      "text": "8.5  Applicant shall bear all the cost related to the conformity assessment of the \nproduct.",
+      "evidence": {
+        "page_start": 5,
+        "page_end": 5,
+        "quote": "8.5  Applicant shall bear all the cost related to the conformity assessment of the \nproduct."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c27",
+      "type": "obligation",
+      "heading": "9.1",
+      "text": "9.1 Product shall be registered after a full confirmation that the product is complying \nwith the requirements of the relevant IEC or UAE Standard and by this Specific \nRequirement.",
+      "evidence": {
+        "page_start": 6,
+        "page_end": 6,
+        "quote": "9.1 Product shall be registered after a full confirmation that the product is complying \nwith the requirements of the relevant IEC or UAE Standard and by this Specific \nRequirement."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c28",
+      "type": "other",
+      "heading": "9.2",
+      "text": "9.2  Where the results of test showed that product is not complying with the \nrequirements, the client needs to rectify the observed non-compliances and can \nreapply once rectification is made.",
+      "evidence": {
+        "page_start": 6,
+        "page_end": 6,
+        "quote": "9.2  Where the results of test showed that product is not complying with the \nrequirements, the client needs to rectify the observed non-compliances and can \nreapply once rectification is made."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c29",
+      "type": "other",
+      "heading": "9.3",
+      "text": "9.3 An ECAS Registration Certificate shall be issued to the product upon the \nfulfillment of all the requirements.",
+      "evidence": {
+        "page_start": 6,
+        "page_end": 6,
+        "quote": "9.3 An ECAS Registration Certificate shall be issued to the product upon the \nfulfillment of all the requirements."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c30",
+      "type": "obligation",
+      "heading": "10.1",
+      "text": "10.1 Low Voltage Electrical Equipment are being inspected at Port of Entry. Only \nconsignments having valid ECAS Registration Certificates and valid ECAS Mark of \nConformity are allowed to enter the country.",
+      "evidence": {
+        "page_start": 6,
+        "page_end": 6,
+        "quote": "10.1 Low Voltage Electrical Equipment are being inspected at Port of Entry. Only \nconsignments having valid ECAS Registration Certificates and valid ECAS Mark of \nConformity are allowed to enter the country."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c31",
+      "type": "penalty",
+      "heading": "10.2",
+      "text": "10.2 Consignment without the ECAS Registration Certificate shall be held. Ports and \nCustoms authority shall coordinate with ESMA whenever a consignment without ECAS \ncertificated is observed. Appropriate action shall then be taken by both ESMA and the \nPorts and Customs Authorities.",
+      "evidence": {
+        "page_start": 6,
+        "page_end": 6,
+        "quote": "10.2 Consignment without the ECAS Registration Certificate shall be held. Ports and \nCustoms authority shall coordinate with ESMA whenever a consignment without ECAS \ncertificated is observed. Appropriate action shall then be taken by both ESMA and the \nPorts and Customs Authorities."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "needs_review",
+      "review_reasons": [
+        "high_impact_type"
+      ]
+    },
+    {
+      "id": "c32",
+      "type": "other",
+      "heading": "10.3",
+      "text": "10.3 Products manufactured in UAE are monitored in the factory, warehouses and in \nretails shops. Products having ECAS Registration are allowed to be traded in the UAE.",
+      "evidence": {
+        "page_start": 6,
+        "page_end": 6,
+        "quote": "10.3 Products manufactured in UAE are monitored in the factory, warehouses and in \nretails shops. Products having ECAS Registration are allowed to be traded in the UAE."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c33",
+      "type": "obligation",
+      "heading": "10.4",
+      "text": "10.4 Registered products being delivered to UAE shall be inspected to ensure \ncontinuous compliance. ESMA reserves the right to inspect and conduct inspection of \nthe product being distributed in the market.  ESMA shall conduct a regular monitoring of \nproduct where ESMA shall take samples either at the retail shops or the manufacturer’s \nwarehouse for independent testing. The result of test shall be the basis whether to \ncontinue or stop the registration of the product.",
+      "evidence": {
+        "page_start": 6,
+        "page_end": 6,
+        "quote": "10.4 Registered products being delivered to UAE shall be inspected to ensure \ncontinuous compliance. ESMA reserves the right to inspect and conduct inspection of \nthe product being distributed in the market.  ESMA shall conduct a regular monitoring of \nproduct where ESMA shall take samples either at the retail shops or the manufacturer’s \nwarehouse for independent testing. The result of test shall be the basis whether to \ncontinue or stop the registration of the product."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c34",
+      "type": "obligation",
+      "heading": "10.5",
+      "text": "10.5 ESMA also reserves the right to conduct at anytime factory inspection to ensure full \ncompliance of the product. The factory inspection shall include amongst other the \nprocess and product verification of the product and the manner in which the product are \ncarefully inspected and handled.",
+      "evidence": {
+        "page_start": 6,
+        "page_end": 6,
+        "quote": "10.5 ESMA also reserves the right to conduct at anytime factory inspection to ensure full \ncompliance of the product. The factory inspection shall include amongst other the \nprocess and product verification of the product and the manner in which the product are \ncarefully inspected and handled."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c35",
+      "type": "obligation",
+      "heading": "10.6",
+      "text": "10.6 All fees related to market sampling and testing shall be paid by the manufacturer / \nsupplier",
+      "evidence": {
+        "page_start": 6,
+        "page_end": 6,
+        "quote": "10.6 All fees related to market sampling and testing shall be paid by the manufacturer / \nsupplier"
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c36",
+      "type": "obligation",
+      "heading": "11.1",
+      "text": "11.1 After obtaining the Registration Certificate, the supplier can use the \ncertificate in clearing the registered products at the Ports and Customs \nAuthorities.",
+      "evidence": {
+        "page_start": 7,
+        "page_end": 7,
+        "quote": "11.1 After obtaining the Registration Certificate, the supplier can use the \ncertificate in clearing the registered products at the Ports and Customs \nAuthorities."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c37",
+      "type": "other",
+      "heading": "11.2",
+      "text": "11.2 \nThe supplier may also use the Certificate in trading their product as a \nproof that the product has been approved by ESMA.",
+      "evidence": {
+        "page_start": 7,
+        "page_end": 7,
+        "quote": "11.2 \nThe supplier may also use the Certificate in trading their product as a \nproof that the product has been approved by ESMA."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c38",
+      "type": "obligation",
+      "heading": "11.3",
+      "text": "11.3 \n The ECAS Registration Certificate shall be used only for the registered \nproduct. Care should be taken so as not to misused the certificate and \nnor to use it in such a manner that ESMA may consider misleading.",
+      "evidence": {
+        "page_start": 7,
+        "page_end": 7,
+        "quote": "11.3 \n The ECAS Registration Certificate shall be used only for the registered \nproduct. Care should be taken so as not to misused the certificate and \nnor to use it in such a manner that ESMA may consider misleading."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c39",
+      "type": "effective_date",
+      "heading": "11.4",
+      "text": "11.4 \n ECAS Registration Certificate shall be valid for one year. Renewal of \nregistration shall be required a month before the expiration of the \nRegistration Certificate.",
+      "evidence": {
+        "page_start": 7,
+        "page_end": 7,
+        "quote": "11.4 \n ECAS Registration Certificate shall be valid for one year. Renewal of \nregistration shall be required a month before the expiration of the \nRegistration Certificate."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "needs_review",
+      "review_reasons": [
+        "high_impact_type"
+      ]
+    },
+    {
+      "id": "c40",
+      "type": "exemption",
+      "heading": "12.1",
+      "text": "12.1  ESMA shall not be held responsible for any action (legal or otherwise) \nraise by any party against the manufacturers / suppliers on matters \nresulting from the implementation of ECAS for low voltage equipments",
+      "evidence": {
+        "page_start": 7,
+        "page_end": 7,
+        "quote": "12.1  ESMA shall not be held responsible for any action (legal or otherwise) \nraise by any party against the manufacturers / suppliers on matters \nresulting from the implementation of ECAS for low voltage equipments"
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c41",
+      "type": "obligation",
+      "heading": "12.2",
+      "text": "12.2 \nThe manufacturer / supplier are ultimately responsible for ensuring \nthat the product meets the requirements of other applicable regulations \nthat were not assessed during the process. This includes quality, safety, \nhealth and environmental regulations that are not necessarily covered \nby the relevant Standards and or the Specific Requirements.",
+      "evidence": {
+        "page_start": 7,
+        "page_end": 7,
+        "quote": "12.2 \nThe manufacturer / supplier are ultimately responsible for ensuring \nthat the product meets the requirements of other applicable regulations \nthat were not assessed during the process. This includes quality, safety, \nhealth and environmental regulations that are not necessarily covered \nby the relevant Standards and or the Specific Requirements."
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c42",
+      "type": "obligation",
+      "heading": "12.3",
+      "text": "12.3 \nESMA maintains full confidentiality of all documents submitted by  \nthe client",
+      "evidence": {
+        "page_start": 7,
+        "page_end": 7,
+        "quote": "12.3 \nESMA maintains full confidentiality of all documents submitted by  \nthe client"
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "c43",
+      "type": "other",
+      "heading": "FEES",
+      "text": "a. Application for Registration \nb. Operational fees \nc. Certification Decision Fee",
+      "evidence": {
+        "page_start": 7,
+        "page_end": 7,
+        "quote": "a. Application for Registration \nb. Operational fees \nc. Certification Decision Fee"
+      },
+      "ocr_derived": false,
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    }
+  ],
+  "entities": [
+    {
+      "id": "e1",
+      "clause_id": "c1",
+      "type": "organisation",
+      "text": "Emirates Authority \nfor Standardization and Metrology (ESMA)",
+      "normalized_value": "ESMA",
+      "evidence": {
+        "page_start": 2,
+        "page_end": 2,
+        "quote": "Emirates Authority \nfor Standardization and Metrology (ESMA)"
+      },
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "e2",
+      "clause_id": "c1",
+      "type": "organisation",
+      "text": "Emirates \nConformity Assessment Scheme (ECAS)",
+      "normalized_value": "ECAS",
+      "evidence": {
+        "page_start": 2,
+        "page_end": 2,
+        "quote": "Emirates \nConformity Assessment Scheme (ECAS)"
+      },
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "e3",
+      "clause_id": "c1",
+      "type": "location",
+      "text": "United Arab Emirates",
+      "normalized_value": null,
+      "evidence": {
+        "page_start": 2,
+        "page_end": 2,
+        "quote": "United Arab Emirates"
+      },
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "e4",
+      "clause_id": "c6",
+      "type": "monetary_threshold",
+      "text": "between 50 and 1000 volts for alternating\ncurrent",
+      "normalized_value": null,
+      "evidence": {
+        "page_start": 2,
+        "page_end": 3,
+        "quote": "between 50 and 1000 volts for alternating\ncurrent"
+      },
+      "grounded": false,
+      "review_flag": "rejected",
+      "review_reasons": [
+        "parent_clause_ungrounded",
+        "ungrounded_span",
+        "high_impact_type"
+      ]
+    },
+    {
+      "id": "e5",
+      "clause_id": "c6",
+      "type": "monetary_threshold",
+      "text": "between 75 volts to 1500 volts for direct current",
+      "normalized_value": null,
+      "evidence": {
+        "page_start": 3,
+        "page_end": 3,
+        "quote": "between 75 volts to 1500 volts for direct current"
+      },
+      "grounded": true,
+      "review_flag": "needs_review",
+      "review_reasons": [
+        "parent_clause_ungrounded",
+        "high_impact_type"
+      ]
+    },
+    {
+      "id": "e6",
+      "clause_id": "c7",
+      "type": "regulation_reference",
+      "text": "UAE / IEC 60335-1",
+      "normalized_value": null,
+      "evidence": {
+        "page_start": 3,
+        "page_end": 3,
+        "quote": "UAE / IEC 60335-1"
+      },
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "e7",
+      "clause_id": "c8",
+      "type": "organisation",
+      "text": "ESMA",
+      "normalized_value": null,
+      "evidence": {
+        "page_start": 3,
+        "page_end": 3,
+        "quote": "ESMA"
+      },
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "e8",
+      "clause_id": "c8",
+      "type": "regulation_reference",
+      "text": "Federal Law No. 28",
+      "normalized_value": null,
+      "evidence": {
+        "page_start": 3,
+        "page_end": 3,
+        "quote": "Federal Law No. 28"
+      },
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "e9",
+      "clause_id": "c18",
+      "type": "regulation_reference",
+      "text": "UAE / IEC Standard",
+      "normalized_value": null,
+      "evidence": {
+        "page_start": 4,
+        "page_end": 4,
+        "quote": "UAE / IEC Standard"
+      },
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "e10",
+      "clause_id": "c19",
+      "type": "regulation_reference",
+      "text": "BS 1363",
+      "normalized_value": null,
+      "evidence": {
+        "page_start": 4,
+        "page_end": 4,
+        "quote": "BS 1363. Plugs with earth and fuse for Class I Appliances"
+      },
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "e11",
+      "clause_id": "c19",
+      "type": "regulation_reference",
+      "text": "BS 546",
+      "normalized_value": null,
+      "evidence": {
+        "page_start": 4,
+        "page_end": 4,
+        "quote": "BS 546 Plug Configurations for 15 Ampere Appliances."
+      },
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "e12",
+      "clause_id": "c39",
+      "type": "date",
+      "text": "one year",
+      "normalized_value": null,
+      "evidence": {
+        "page_start": 7,
+        "page_end": 7,
+        "quote": "ECAS Registration Certificate shall be valid for one year"
+      },
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "e13",
+      "clause_id": "c30",
+      "type": "regulation_reference",
+      "text": "ECAS Registration Certificates",
+      "normalized_value": null,
+      "evidence": {
+        "page_start": 6,
+        "page_end": 6,
+        "quote": "ECAS Registration Certificates"
+      },
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "e14",
+      "clause_id": "c25",
+      "type": "regulation_reference",
+      "text": "clause no. 6 of \nECAS General Requirements",
+      "normalized_value": null,
+      "evidence": {
+        "page_start": 5,
+        "page_end": 5,
+        "quote": "clause no. 6 of \nECAS General Requirements"
+      },
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "e15",
+      "clause_id": "c31",
+      "type": "organisation",
+      "text": "ESMA",
+      "normalized_value": null,
+      "evidence": {
+        "page_start": 6,
+        "page_end": 6,
+        "quote": "ESMA"
+      },
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "e16",
+      "clause_id": "c31",
+      "type": "organisation",
+      "text": "Ports and \nCustoms authority",
+      "normalized_value": null,
+      "evidence": {
+        "page_start": 6,
+        "page_end": 6,
+        "quote": "Ports and \nCustoms authority"
+      },
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "e17",
+      "clause_id": "c40",
+      "type": "organisation",
+      "text": "ESMA",
+      "normalized_value": null,
+      "evidence": {
+        "page_start": 7,
+        "page_end": 7,
+        "quote": "ESMA"
+      },
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    },
+    {
+      "id": "e18",
+      "clause_id": "c8",
+      "type": "organisation",
+      "text": "The Emirates Authority for Standardization and Metrology",
+      "normalized_value": null,
+      "evidence": {
+        "page_start": 3,
+        "page_end": 3,
+        "quote": "The Emirates Authority for Standardization and Metrology"
+      },
+      "grounded": true,
+      "review_flag": "auto_publish",
+      "review_reasons": []
+    }
+  ]
+}

@@ -15,6 +15,8 @@ dist/
 # Environment / secrets
 .env
 .env.*
+# Allow example env file to be committed. 
+!.env.example
 
 # Testing / coverage
 .pytest_cache/
@@ -28,6 +30,9 @@ htmlcov/
 # Editors
 .vscode/
 .idea/
+
+# Pipeline output (examples/ holds the checked-in sample instead)
+output/
 
 # OS
 .DS_Store

@@ -1,0 +1,13 @@
+[project]
+name = "extractor"
+version = "0.1.0"
+description = "This codebase ensures you ADHERE to your products' regulations."
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+extractor = "extractor:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"

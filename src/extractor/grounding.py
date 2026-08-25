@@ -4,8 +4,8 @@ Claude is asked to quote text verbatim, but LLMs still occasionally hallucinate.
 Before anything is trusted downstream, we verify what the model returned against
 the text ingestion independently extracted, and turn that (plus OCR provenance
 and clause/entity "blast radius") into a review_flag with an explicit list of
-reasons. This is deliberately rule-based rather than another model call: the
-whole point is a signal to a compliance reviewer.
+reasons. This is deliberately rule-based rather than another model call. 
+The more we can do in code, the better.
 
 There is no confidence score, on purpose. An earlier version blended
 hand-picked penalties into a float, which produced values like 0.7695 that read
@@ -17,8 +17,10 @@ auto-publish. That is the honest consequence, and §4 of the design doc covers
 what would have to be measured to soften it.
 
 The check is only as independent as its source. On native-text pages it is a
-real check. The quote is compared against PyMuPDF's extraction, which the
-model never saw. On OCR'd pages both sides trace back to Claude, so it degrades
+real check: the quote is compared against PyMuPDF's extraction, which no
+Claude call generated -- the model reads that same text to find clauses, but
+can't corrupt it afterward, so a paraphrase or drifted quote still gets
+caught. On OCR'd pages both sides trace back to Claude, so it degrades
 to a copy-fidelity check and a mis-transcribed figure still verifies as
 "grounded"; those are routed to review rather than trusted. Closing it properly
 needs a second, independent OCR pass. See docs/SOLUTION_DESIGN.md §2.2.
@@ -127,7 +129,7 @@ def _check_against_source(
 
     if not quote_found:
         # separate "this text doesn't exist" from "it exists, wrong pages
-        # cited" -- different triage, and only the latter is salvageable
+        # cited"
         if _locate_span(quote, document) is not None:
             reasons.append("page_range_mismatch")
             return GroundingCheck(grounded=False, reasons=reasons)
@@ -157,7 +159,7 @@ def _check_against_source(
     return GroundingCheck(grounded=True, reasons=reasons)
 
 
-# turn the accumulated facts into one flag -- no arithmetic, just a table
+# turn the accumulated facts into one flag
 def _flag(check: GroundingCheck, *, high_impact: bool) -> tuple[str, list[str]]:
     reasons = list(check.reasons)
 

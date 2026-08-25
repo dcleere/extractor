@@ -21,10 +21,9 @@ Assumptions:
 |---|---|
 | Volume | Thousands of documents per jurisdiction; continuous new/changed arrivals plus occasional bulk backfills. |
 | Document profile | 5–300+ pages; mixed PDF/HTML; inconsistent structure, tables, footnotes, cross-references; some scanned pages. |
-| Languages | English first. Component choices must not preclude non-Latin scripts later, but multilingual is out of scope for v1 (§6). |
+| Languages | English first. Component choices must not preclude non-Latin scripts later, but multilingual is out of scope for v1 (§5). |
 | Accuracy | Precision over latency. Nothing publishes unless its evidence verifies against the source; high-impact extractions (penalties, monetary thresholds, effective dates) go to human review regardless. |
 | **Observability (added)** | This is a compliance product. Therefore, an extraction that is later found wrong (or reprocessed with a better model) must not silently overwrite history. Every record needs versioning: which model, which prompt, when. |
-| **Idempotency (added)** | The same document will be re-ingested (edited source, re-crawled, reprocessed after a prompt fix). Ingestion must dedupe/version by content hash, not just filename. |
 
 ## 2. End-to-end architecture
 
@@ -45,8 +44,8 @@ Source docs (PDF/HTML)
 └─────────┬──────────┘
           ▼
 ┌───────────────────┐
-│ 3. Entity          │  LLM structured extraction per clause, entities
-│    extraction      │  linked to clause_id
+│ 3. Segment &       │  LLM structured extraction: clauses typed and
+│    extract         │  segmented, entities linked to clause_id
 └─────────┬──────────┘
           ▼
 ┌───────────────────┐
@@ -77,13 +76,13 @@ OCR.
 | Artifacts | Object store, content-hash keyed (S3 / Blob Storage / GCS). |
 | Trigger | Object event → queue → one workflow execution per document version. |
 | Orchestration | Durable state machine (Step Functions / Logic Apps / Workflows). Stages are stateless functions; the machine holds state, retries and the DLQ. |
-| Document state | Key-value store (DynamoDB / Cosmos / Firestore) tracking status, current stage, config version, timings, failure reason. Answers *"where is document X?"*, drives the review queue, makes re-ingest idempotent. Distinct from §2.6's published output store. | 
-
+| Document state | Key-value store (DynamoDB / Cosmos / Firestore) tracking status, current stage, config version, timings, failure reason. Answers *"where is document X?"*, drives the review queue, makes re-ingest idempotent. Distinct from §2.6's published output store. |
 
 **Asynchronous.** Multi-page OCR is a submit/callback API at
 every major provider, not a function call. The state machine waits on a job
 token rather than blocking a worker — which is why this is a state machine
-and not a chain of queue consumers.
+and not a chain of queue consumers. A 300-page document is also not one unit
+of work: parse is per-page, grounding is per-clause.
 
 **The binding constraint is provider tokens-per-minute, not compute.**
 Serverless compute scales past the model quota trivially, so the limiter must
@@ -92,7 +91,7 @@ queue depth, retry with jitter on 429, DLQ for repeat failures. Sizing the
 infrastructure without sizing the quota is the standard way this class of
 pipeline falls over.
 
-**Two lanes, same stages.** New arrivals take the asynchronous lane (minutes).
+**Async and Batch** New arrivals take the asynchronous path (minutes).
 Backfills and reprocessing after a prompt change take a **batch-inference
 lane** (Anthropic Message Batches / Bedrock batch / equivalent): roughly half
 the token price for ~24h turnaround.
@@ -116,7 +115,7 @@ reading order and table detection. For pages with **no usable text layer**
 **Output contract of this stage:** text, plus — for anything *recognised*
 rather than read from an existing text layer — per-word/per-region
 recognition confidence **and bounding boxes**. Every mainstream Document-AI
-service exposes both. These aren't incidental extras: §2.5a scopes review
+service exposes both. These aren't incidental extras: §2.5 scopes review
 triage to the region behind each citation, §2.7 puts the box in front of the
 reviewer, and §3 carries both on the evidence record — so a parse backend
 that can't supply them forces the conservative default (route to review) for
@@ -155,26 +154,33 @@ handwritten annotations, rotated or multi-column layouts, complex tables.
 It is good at those (to be verified against the golden set), and used
 narrowly there the cost is immaterial.
 
-### 2.3 Entity extraction
-Structured (schema-constrained) LLM output per clause extracting typed
-entities, each linked to its `clause_id`. Deterministic normalization (date
-parsing, currency/amount parsing, an org-name alias table) happens as a
-separate post-processing step, not inside the LLM call — normalization is a
-solved, testable problem that doesn't need a language model's judgment.
+### 2.3 Segmentation & entity extraction
+One schema-constrained LLM pass turns parsed text into typed clauses and the
+entities inside them, each entity linked to its `clause_id`. Where a document
+follows a clean numbering convention, cheap heuristics ("Article 5", "Section
+3.2(a)", heading/font-size signals) can pre-build the hierarchy and narrow what
+the model is asked to judge — an optimisation, not a precondition.
 
-### 2.5 Grounding & review triage
+Deterministic normalization (date parsing, currency/amount parsing, an
+org-name alias table) happens as a separate post-processing step, not inside
+the LLM call — normalization is a solved, testable problem that doesn't need a
+language model's judgment.
+
+### 2.4 Grounding & review triage
 Every clause/entity's quoted span is checked against the actual source text
 it claims to come from. This is the single highest-leverage reliability
 mechanism in the whole design and captures
 plausible-sounding fabrication. See §3 for the full rule set.
 
-Its limit is worth stating plainly: grounding verifies **presence, not
-correctness**. A correctly quoted span attached to the wrong clause type — a
-real sentence extracted as an obligation when it is an exemption — passes
-every check here. That class of error is caught by the golden set (§4), not
-by grounding, which is why §4 is not optional.
+Two limits are worth stating plainly. Grounding verifies **presence, not
+correctness**: a correctly quoted span attached to the wrong clause type — a
+real sentence extracted as an obligation when it is an exemption — passes every
+check here, and only the golden set (§4) catches it. And the check is only as
+independent as its source: where text was *recognised* rather than read from a
+text layer, both sides trace back to a model, so grounding degrades from a real
+check to copy-fidelity. That is what `source_kind` records (§3).
 
-### 2.5a OCR-engine confidence as a review-triage signal
+### 2.5 OCR-engine confidence as a review-triage signal
 A dedicated OCR/Document-AI engine (§2.2) returns a **per-word or per-line
 confidence score** for its own character recognition (e.g. Azure Document
 Intelligence's per-word `confidence`). This is a materially different signal
@@ -222,7 +228,7 @@ component rather than a backlog:
   review the system isn't economically viable, so review rate is budgeted and
   tracked. §4's reason-level precision is the instrument for tuning it: a
   reason with a high false-alarm rate spends reviewer time for nothing. A
-  rising review rate is also a degradation alarm (§5.1).
+  rising review rate is also the earliest signal of quality degradation.
 - **Decisions write a new version, never an overwrite** (§2.6), and become
   raw material for the golden set (§4) and future prompt/model iteration.
 
@@ -236,7 +242,7 @@ evidence:  {                                       # the citation backing it
   locator:  { page_start, page_end } | anchor,     #   format-specific position
   bbox:     [x, y, w, h] | null,                   #   region on the page, where known
   quote:    str,                                   #   the verbatim span
-  recognition_confidence: float | null             #   per §2.5a, null where N/A
+  recognition_confidence: float | null             #   per §2.5, null where N/A
 }
 grounded:  bool                                    # text AND quote verified in source
 source_kind: native_text | recognised | markup     # how the source text was obtained
@@ -246,7 +252,7 @@ review_reasons: [...]                              # which facts fired, and why
 
 `source_kind` replaces a page-level "was this OCR'd" boolean: it records how
 the text a citation rests on was obtained, which determines whether grounding
-is an independent check or merely copy-fidelity (§2.5). `bbox` and
+is an independent check or merely copy-fidelity (§2.4). `bbox` and
 `recognition_confidence` are evidence-scoped, not page-scoped — the first
 sends a reviewer straight to the pixels, the second conditions the rules below.
 
@@ -290,7 +296,7 @@ threshold (§4 sets it), never blended.
 **Source-dependent rules** ask *"is this text present in the source?"*, so
 their answer is only as good as the source. Recognition confidence conditions
 them: on a recognised source a missing quote is ambiguous between fabrication
-and mis-recognition (§2.5a).
+and mis-recognition (§2.5).
 
 | `review_reason` | Condition | Verdict |
 |---|---|---|
@@ -302,7 +308,6 @@ and mis-recognition (§2.5a).
 | `fuzzy_match` | near-match; source `native_text`/`markup`, or `recognised` not below threshold | `auto_publish` |
 | `low_recognition_confidence` | near-match on a `recognised` region below threshold | `needs_review` |
 | `unverifiable_source` | `source_kind` is `recognised`, no confidence signal available | `needs_review` |
-
 
 **Source-independent rules** inspect the extraction alone:
 
@@ -324,14 +329,14 @@ fire on it.
 ## 4. Evaluation & quality bar
 
 Evaluation is a **runnable artifact in the repo, not a document**: a CLI that
-replays a pinned corpus against a pinned config version (§5.2) and writes
-results keyed by that version, so any two runs are diffable. It runs in CI on
-every prompt, schema or model change and gates release (§5.2).
+replays a pinned corpus against a pinned config version and writes results
+keyed by that version, so any two runs are diffable. It runs in CI on every
+prompt, schema or model change, and gates release.
 
 - **Golden set**: a manually annotated sample spanning multiple
   jurisdictions, document types and formats (including scanned documents) —
   precision/recall/F1 **sliced per clause type, entity type, document type
-  and jurisdiction**. 
+  and jurisdiction**.
 - **Adversarial negatives**: the design rests on the grounding check, so the
   check itself is tested. The corpus carries deliberately corrupted
   extractions — fabricated spans, quotes moved to the wrong locator, entities
@@ -343,6 +348,11 @@ every prompt, schema or model change and gates release (§5.2).
   `needs_review` items, and how often they *catch* something that was
   `auto_publish`. The second number is the one that should worry you if it
   ever rises.
+- **Reason-level precision**: for each `review_reason`, how often it fired on
+  an extraction a human then judged correct. A high false-alarm reason costs
+  reviewer time for nothing and should be loosened; one that never fires is
+  dead weight. This is also what calibrates the recognition-confidence
+  threshold §3 depends on.
 - **Cost and latency per document**, gated alongside quality and sliced by
   document type. A prompt change that lifts F1 a point and triples token spend
   is a regression.
@@ -353,36 +363,31 @@ Each milestone is defined by the evidence that closes it, not the code in it.
 
 | Milestone | Scope | Closed by |
 |---|---|---|
-| **M0 — thin slice** | One jurisdiction, one format (digital PDF); LLM segmentation, grounded extraction, decision-table triage, JSON output — **plus the eval harness and golden set from day one**. | Golden-set F1 baseline established; adversarial negatives all caught; grounding rate measured. |
+| **M0 — thin slice** | One jurisdiction, one format (digital PDF); LLM segmentation, grounded extraction, decision-table triage, JSON output — **plus the eval harness and golden set from day one**. Instrument from the very beginning. | Golden-set F1 baseline established; adversarial negatives all caught; grounding rate measured. Log usage metrics and build out observability for auditability.|
 | **M1 — recognition** | Dedicated Document-AI for scanned pages; `source_kind`, `recognition_confidence` and `bbox` populated end to end; frontier vision as narrow fallback. | Threshold calibrated from reason-level precision; scanned documents in the golden set meeting the same bar. |
 | **M2 — the loop** | Review queue and UI, decision write-back, feedback into the golden set; auto-publish flag plus shadow/canary machinery. | Review agreement rate measured; one segment promoted to `auto_publish` on evidence. |
 | **M3 — scale** | Batch backfill lane, multi-jurisdiction rollout, HTML adapter hardened for real-world markup. | Full corpus backfilled within cost budget; per-jurisdiction metrics held. |
 
-**Deferred beyond M3**: multilingual support; cross-document reference
-resolution (a `regulation_reference` entity is extracted as text, not resolved
-to a document in the corpus); active learning or fine-tuning from review
-decisions; script-rendered HTML.
+**Deferred beyond M3**: multilingual support; active learning or fine-tuning from review
+decisions.
 
 The order is deliberate. The eval harness sits in M0 rather than later because
 every subsequent milestone is gated on it — a system that cannot measure
 itself cannot be safely changed.
 
-## 7. Risks & trade-offs
+## 6. Risks & trade-offs
 
 | Risk | Mitigation |
 |---|---|
-| LLM hallucinates a clause/entity or its span | Grounding check (§2.5, §3) — the core defense. |
-| **Grounding verifies presence, not correctness** — a real quote misclassified as the wrong clause type passes every automated check | The deepest limitation in the design. |
+| LLM hallucinates a clause/entity or its span | Grounding check (§2.4, §3) — the core defense. |
+| **Grounding verifies presence, not correctness** — a real quote misclassified as the wrong clause type passes every automated check | The deepest limitation in the design; only the golden set catches it (§4), which is why per-type slicing is mandatory rather than nice-to-have. |
 | Poor scan quality → bad recognition → bad extraction | Per-region `recognition_confidence` conditions triage (§3); very low-confidence pages route to human transcription rather than through the LLM at all. |
-| **Model deprecated or silently changed underneath you** | Config-pinned model version, regression gate before any change ships (§5.2), eval results retained per version so drift is provable rather than suspected. |
-| **Review capacity saturates** — quality gates are worthless if the queue is unworkable | Review rate budgeted as an SLO (§2.7), tuned via reason-level precision (§4); a reason that cannot be made precise is removed rather than tolerated. |
-| **Upstream source changes format or blocks the crawler** | Ingestion failures alarm separately from processing failures; content-hash versioning makes a silent format change visible as a mass re-extraction. |
-| Cost/latency at 300+-page documents, thousands of docs | Native-text-first (§2.2), fan-out per page/clause, batch lane for backfill, caching of parse output across re-runs. |
-| Residency or provider lock-in | Stage boundaries are provider-agnostic contracts (§2.2's output contract especially), so the recognition and LLM stages can be swapped per region (§5.3). |
+| **Model deprecated or silently changed underneath you** | Config-pinned model version, regression gate before any change ships (§4), eval results retained per version so drift is provable rather than suspected. |
+| **Review capacity saturates** — quality gates are worthless if the queue is unworkable | Review rate budgeted and tracked (§2.7), tuned via reason-level precision (§4); a reason that cannot be made precise is removed rather than tolerated. |
+| Cost/latency at 300+-page documents, thousands of docs | Native-text-first (§2.2), per-page/per-clause fan-out (§2.0), batch lane for backfill, caching of parse output across re-runs. |
 | Compliance product needs an audit trail | Versioned records by design (§2.6), not bolted on later. |
 
-
-## 9. References
+## 7. References
 
 Claude helped with this design. Here are references I used to help with this design also.
 - https://github.com/aws-solutions-library-samples/accelerated-intelligent-document-processing-on-aws

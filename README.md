@@ -1,11 +1,12 @@
 # extractor
 
-
 A small proof-of-concept for regulatory clause & entity extraction:
 ingest a regulatory PDF or HTML document, segment it into clauses
 (definitions, obligations, exemptions, penalties, effective dates, scope),
 extract legally significant entities linked to those clauses, and attach
 source evidence plus a review signal to every extraction.
+
+I considered the OCR and validation steps as highest risk since these will flow to downstream systems. Ensuring that these steps operate effectively, can scale efficiently and monitored closely is extremely important in building a trustworthy system.
 
 The full end-to-end system design (production architecture, OCR trade-offs,
 evaluation plan, rollout strategy) is in
@@ -39,7 +40,7 @@ the POC.
    gratuitously wide claimed page range goes to review, since the model picks
    its own range and a wide one makes its own check easier to pass; and
    entities are grounded inside their parent clause rather than a whole page,
-   because a four-character entity matches almost any page. This is not optimal.
+   because a four-character entity matches almost any page. This is not optimal as a model is typically overconfident and not designed to provide this type of output.
 4. **Output** — a structured JSON file per document
    (`schema.py:ExtractionResult`) written to `output/`.
 
@@ -86,7 +87,7 @@ paid API on purpose — that's a separate, deliberate step.
 
 - Requires an Anthropic API key (`ANTHROPIC_API_KEY`) — see `.env.example`.
 - This is intentionally narrow: one document, one pass, no queue/storage/
-  review-UI. See `docs/SOLUTION_DESIGN.md` §6 for what's deferred and why.
+  review-UI. See `docs/SOLUTION_DESIGN.md` §5 for what's deferred and why.
 - **There is deliberately no confidence score.** An earlier version blended
   hand-picked penalties into a float and produced values like `0.7695` — a
   number that reads as calibrated when nothing had been fitted, which in a

@@ -1,7 +1,6 @@
 """Thin wrapper around the Anthropic SDK for the two calls this POC needs:
 vision transcription (OCR fallback) and schema-constrained structured
-extraction. Centralising retries here keeps ingest.py/segment_extract.py
-focused on their own logic.
+extraction.
 """
 
 from __future__ import annotations
@@ -17,8 +16,7 @@ MAX_RETRIES = 3
 RETRY_BACKOFF_SECONDS = 2.0
 
 
-# Keywords pydantic emits (e.g. from Field(ge=..., le=...)) that Anthropic's
-# structured-output JSON Schema subset rejects outright.
+# unsupported JSON Schema Pydantic keywords that the SDK does not support
 _UNSUPPORTED_SCHEMA_KEYWORDS = {
     "minimum",
     "maximum",

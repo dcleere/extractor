@@ -26,7 +26,7 @@ RENDER_DPI = 175
 OCR_SYSTEM_PROMPT = (
     "You are a strict OCR transcription engine. Transcribe the visible text of "
     "this document page exactly as it appears, preserving reading order, "
-    "paragraph breaks, and numbering. Do not summarize, interpret, translate, "
+    "paragraph breaks, tables, and numbering. Do not summarize, interpret, translate, "
     "or add anything that is not printed on the page. Output plain text only."
 )
 

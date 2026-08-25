@@ -15,7 +15,7 @@ from .segment_extract import PROMPT_VERSION, extract
 
 HTML_SUFFIXES = {".html", ".htm"}
 
-
+# computes a content hash of the source document
 def _sha256(path: Path) -> str:
     h = hashlib.sha256()
     h.update(path.read_bytes())
@@ -27,7 +27,7 @@ def _ingest(doc_path: Path, client: ClaudeClient) -> IngestedDocument:
         return ingest_html(str(doc_path))
     return ingest_pdf(str(doc_path), client)
 
-
+# main entry point in the pipeline
 def run(doc_path: str | Path, client: ClaudeClient) -> ExtractionResult:
     doc_path = Path(doc_path)
     if not doc_path.is_file():
@@ -39,8 +39,7 @@ def run(doc_path: str | Path, client: ClaudeClient) -> ExtractionResult:
     document = _ingest(doc_path, client)
     model_extraction = extract(document, client)
 
-    # Clauses first: entity grounding is scoped to the parent clause, and can
-    # only use it as scope once the clause itself has been verified.
+    # grounding
     clauses = [ground_clause(c, document) for c in model_extraction.clauses]
     clauses_by_id = {c.id: c for c in clauses}
     entities = [

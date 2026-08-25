@@ -65,7 +65,7 @@ uv run extractor docs/screenshot_eg.png   # a png screenshot of a page in sample
 ```
 
 Pre-generated examples are checked in at `examples/sample_output.json` (PDF)
-and `examples/sample_output_html.json` (HTML) and `examples/sample_png_output.json` (PNG) so the shape of the output is inspectable without running anything.
+and `examples/sample_output_html.json` (HTML) and `examples/sample_output_png.json` (PNG) so the shape of the output is inspectable without running anything.
 
 ## Tests
 
@@ -82,6 +82,8 @@ against the current schema (`tests/test_schema.py`), and the full
 ingest → extract → ground pipeline wired together with a stub client
 (`tests/test_pipeline.py`). `uv run extractor` itself still hits the real,
 paid API on purpose — that's a separate, deliberate step.
+
+Claude generated these unit tests. Note that I did not review them in the scope of this exercise.
 
 ## Notes
 

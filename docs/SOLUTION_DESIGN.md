@@ -380,7 +380,7 @@ itself cannot be safely changed.
 | Risk | Mitigation |
 |---|---|
 | LLM hallucinates a clause/entity or its span | Grounding check (§2.4, §3) — the core defense. |
-| **Grounding verifies presence, not correctness** — a real quote misclassified as the wrong clause type passes every automated check | The deepest limitation in the design; only the golden set catches it (§4), which is why per-type slicing is mandatory rather than nice-to-have. |
+| **Grounding verifies presence, not correctness** — a real quote misclassified as the wrong clause type passes every automated check | The deepest limitation in the design. |
 | Poor scan quality → bad recognition → bad extraction | Per-region `recognition_confidence` conditions triage (§3); very low-confidence pages route to human transcription rather than through the LLM at all. |
 | **Model deprecated or silently changed underneath you** | Config-pinned model version, regression gate before any change ships (§4), eval results retained per version so drift is provable rather than suspected. |
 | **Review capacity saturates** — quality gates are worthless if the queue is unworkable | Review rate budgeted and tracked (§2.7), tuned via reason-level precision (§4); a reason that cannot be made precise is removed rather than tolerated. |

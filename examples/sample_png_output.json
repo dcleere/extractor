@@ -1,0 +1,407 @@
+{
+  "document": {
+    "id": "6a8bdc4c-5f02-45c3-9f2c-fc1a51953625",
+    "filename": "screenshot_eg.png",
+    "page_count": 1,
+    "source_hash": "389962ef005792f82417a30d70a71ebe4e4db4e89612cf1e3c83412c6a9c2cfa",
+    "extracted_at": "2026-08-25T09:36:52.782039Z",
+    "model": "claude-sonnet-5",
+    "prompt_version": "v2"
+  },
+  "clauses": [
+    {
+      "id": "c1",
+      "type": "obligation",
+      "heading": "6. REQUIREMENTS FOR CERTIFICATION",
+      "text": "6.1 Compliance of relevant components to be used in manufacturing electrical low\n    voltage equipment to relevant UAE / IEC Standard. Clients are required to submit\n    Manufacturer's Declaration of Conformity and Test Report that to comply with\n    this requirement.",
+      "evidence": {
+        "page_start": 1,
+        "page_end": 1,
+        "quote": "6.1 Compliance of relevant components to be used in manufacturing electrical low\n    voltage equipment to relevant UAE / IEC Standard. Clients are required to submit\n    Manufacturer's Declaration of Conformity and Test Report that to comply with\n    this requirement."
+      },
+      "ocr_derived": true,
+      "grounded": true,
+      "review_flag": "needs_review",
+      "review_reasons": [
+        "ocr_derived_source"
+      ]
+    },
+    {
+      "id": "c2",
+      "type": "obligation",
+      "heading": "6.2 Manufacturer's / Traders Declaration of Conformity",
+      "text": "6.2  Manufacturer's / Traders Declaration of Conformity",
+      "evidence": {
+        "page_start": 1,
+        "page_end": 1,
+        "quote": "6.2  Manufacturer's / Traders Declaration of Conformity"
+      },
+      "ocr_derived": true,
+      "grounded": true,
+      "review_flag": "needs_review",
+      "review_reasons": [
+        "ocr_derived_source"
+      ]
+    },
+    {
+      "id": "c3",
+      "type": "obligation",
+      "heading": "6.3 Compliance of the Product",
+      "text": "6.3 Compliance of the Product to the requirements of UAE Standards or its\n    equivalent international standards.",
+      "evidence": {
+        "page_start": 1,
+        "page_end": 1,
+        "quote": "6.3 Compliance of the Product to the requirements of UAE Standards or its\n    equivalent international standards."
+      },
+      "ocr_derived": true,
+      "grounded": true,
+      "review_flag": "needs_review",
+      "review_reasons": [
+        "ocr_derived_source"
+      ]
+    },
+    {
+      "id": "c4",
+      "type": "obligation",
+      "heading": "6.4 Compliance of the equipment plugs",
+      "text": "6.4  Compliance of the equipment plugs to:",
+      "evidence": {
+        "page_start": 1,
+        "page_end": 1,
+        "quote": "6.4  Compliance of the equipment plugs to:"
+      },
+      "ocr_derived": true,
+      "grounded": true,
+      "review_flag": "needs_review",
+      "review_reasons": [
+        "ocr_derived_source"
+      ]
+    },
+    {
+      "id": "c5",
+      "type": "obligation",
+      "heading": "6.4.1",
+      "text": "6.4.1   BS 1363. Plugs with earth and fuse for Class I Appliances",
+      "evidence": {
+        "page_start": 1,
+        "page_end": 1,
+        "quote": "6.4.1   BS 1363. Plugs with earth and fuse for Class I Appliances"
+      },
+      "ocr_derived": true,
+      "grounded": true,
+      "review_flag": "needs_review",
+      "review_reasons": [
+        "ocr_derived_source"
+      ]
+    },
+    {
+      "id": "c6",
+      "type": "obligation",
+      "heading": "6.4.2",
+      "text": "6.4.2   BS 1363 Plugs with a dummy plastic earth pin for Class II Appliances",
+      "evidence": {
+        "page_start": 1,
+        "page_end": 1,
+        "quote": "6.4.2   BS 1363 Plugs with a dummy plastic earth pin for Class II Appliances"
+      },
+      "ocr_derived": true,
+      "grounded": true,
+      "review_flag": "needs_review",
+      "review_reasons": [
+        "ocr_derived_source"
+      ]
+    },
+    {
+      "id": "c7",
+      "type": "obligation",
+      "heading": "6.4.3",
+      "text": "6.4.3   BS 546 Plug Configurations for 15 Ampere Appliances.",
+      "evidence": {
+        "page_start": 1,
+        "page_end": 1,
+        "quote": "6.4.3   BS 546 Plug Configurations for 15 Ampere Appliances."
+      },
+      "ocr_derived": true,
+      "grounded": true,
+      "review_flag": "needs_review",
+      "review_reasons": [
+        "ocr_derived_source"
+      ]
+    },
+    {
+      "id": "c8",
+      "type": "obligation",
+      "heading": "6.5 Users Manual",
+      "text": "6.5 Users Manual in Arabic and English language.",
+      "evidence": {
+        "page_start": 1,
+        "page_end": 1,
+        "quote": "6.5 Users Manual in Arabic and English language."
+      },
+      "ocr_derived": true,
+      "grounded": true,
+      "review_flag": "needs_review",
+      "review_reasons": [
+        "ocr_derived_source"
+      ]
+    },
+    {
+      "id": "c9",
+      "type": "obligation",
+      "heading": "6.6 Country of Origin marking",
+      "text": "6.6 Country of Origin marking on the product",
+      "evidence": {
+        "page_start": 1,
+        "page_end": 1,
+        "quote": "6.6 Country of Origin marking on the product"
+      },
+      "ocr_derived": true,
+      "grounded": true,
+      "review_flag": "needs_review",
+      "review_reasons": [
+        "ocr_derived_source"
+      ]
+    },
+    {
+      "id": "c10",
+      "type": "exemption",
+      "heading": "6.7 Tropical Climatic Conditions",
+      "text": "6.7 Where applicable, compliance of the product to Tropical Climatic Conditions",
+      "evidence": {
+        "page_start": 1,
+        "page_end": 1,
+        "quote": "6.7 Where applicable, compliance of the product to Tropical Climatic Conditions"
+      },
+      "ocr_derived": true,
+      "grounded": true,
+      "review_flag": "needs_review",
+      "review_reasons": [
+        "ocr_derived_source"
+      ]
+    },
+    {
+      "id": "c11",
+      "type": "other",
+      "heading": "7. REGISTRATION PROCEDURE",
+      "text": "7. REGISTRATION PROCEDURE\n\n    7.1 Application Submission",
+      "evidence": {
+        "page_start": 1,
+        "page_end": 1,
+        "quote": "7. REGISTRATION PROCEDURE\n\n    7.1 Application Submission"
+      },
+      "ocr_derived": true,
+      "grounded": true,
+      "review_flag": "needs_review",
+      "review_reasons": [
+        "ocr_derived_source"
+      ]
+    },
+    {
+      "id": "c12",
+      "type": "other",
+      "heading": "Form Identification",
+      "text": "Form: Requirements for Registration of Low Voltage Equipment | Identification no.:  CARL-01",
+      "evidence": {
+        "page_start": 1,
+        "page_end": 1,
+        "quote": "Form: Requirements for Registration of Low Voltage Equipment | Identification no.:  CARL-01"
+      },
+      "ocr_derived": true,
+      "grounded": true,
+      "review_flag": "needs_review",
+      "review_reasons": [
+        "ocr_derived_source"
+      ]
+    },
+    {
+      "id": "c13",
+      "type": "effective_date",
+      "heading": "Date of Review",
+      "text": "Page (4) of (8) | Revision:  4 | Date of Review :  March 1, 2014",
+      "evidence": {
+        "page_start": 1,
+        "page_end": 1,
+        "quote": "Page (4) of (8) | Revision:  4 | Date of Review :  March 1, 2014"
+      },
+      "ocr_derived": true,
+      "grounded": true,
+      "review_flag": "needs_review",
+      "review_reasons": [
+        "ocr_derived_source",
+        "high_impact_type"
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "e1",
+      "clause_id": "c1",
+      "type": "regulation_reference",
+      "text": "UAE / IEC Standard",
+      "normalized_value": null,
+      "evidence": {
+        "page_start": 1,
+        "page_end": 1,
+        "quote": "UAE / IEC Standard"
+      },
+      "grounded": true,
+      "review_flag": "needs_review",
+      "review_reasons": [
+        "ocr_derived_source"
+      ]
+    },
+    {
+      "id": "e2",
+      "clause_id": "c3",
+      "type": "regulation_reference",
+      "text": "UAE Standards",
+      "normalized_value": null,
+      "evidence": {
+        "page_start": 1,
+        "page_end": 1,
+        "quote": "UAE Standards"
+      },
+      "grounded": true,
+      "review_flag": "needs_review",
+      "review_reasons": [
+        "ocr_derived_source"
+      ]
+    },
+    {
+      "id": "e3",
+      "clause_id": "c5",
+      "type": "regulation_reference",
+      "text": "BS 1363",
+      "normalized_value": null,
+      "evidence": {
+        "page_start": 1,
+        "page_end": 1,
+        "quote": "BS 1363"
+      },
+      "grounded": true,
+      "review_flag": "needs_review",
+      "review_reasons": [
+        "ocr_derived_source"
+      ]
+    },
+    {
+      "id": "e4",
+      "clause_id": "c5",
+      "type": "product_category",
+      "text": "Class I Appliances",
+      "normalized_value": null,
+      "evidence": {
+        "page_start": 1,
+        "page_end": 1,
+        "quote": "Class I Appliances"
+      },
+      "grounded": true,
+      "review_flag": "needs_review",
+      "review_reasons": [
+        "ocr_derived_source"
+      ]
+    },
+    {
+      "id": "e5",
+      "clause_id": "c6",
+      "type": "regulation_reference",
+      "text": "BS 1363",
+      "normalized_value": null,
+      "evidence": {
+        "page_start": 1,
+        "page_end": 1,
+        "quote": "BS 1363"
+      },
+      "grounded": true,
+      "review_flag": "needs_review",
+      "review_reasons": [
+        "ocr_derived_source"
+      ]
+    },
+    {
+      "id": "e6",
+      "clause_id": "c6",
+      "type": "product_category",
+      "text": "Class II Appliances",
+      "normalized_value": null,
+      "evidence": {
+        "page_start": 1,
+        "page_end": 1,
+        "quote": "Class II Appliances"
+      },
+      "grounded": true,
+      "review_flag": "needs_review",
+      "review_reasons": [
+        "ocr_derived_source"
+      ]
+    },
+    {
+      "id": "e7",
+      "clause_id": "c7",
+      "type": "regulation_reference",
+      "text": "BS 546",
+      "normalized_value": null,
+      "evidence": {
+        "page_start": 1,
+        "page_end": 1,
+        "quote": "BS 546"
+      },
+      "grounded": true,
+      "review_flag": "needs_review",
+      "review_reasons": [
+        "ocr_derived_source"
+      ]
+    },
+    {
+      "id": "e8",
+      "clause_id": "c7",
+      "type": "product_category",
+      "text": "15 Ampere Appliances",
+      "normalized_value": null,
+      "evidence": {
+        "page_start": 1,
+        "page_end": 1,
+        "quote": "15 Ampere Appliances"
+      },
+      "grounded": true,
+      "review_flag": "needs_review",
+      "review_reasons": [
+        "ocr_derived_source"
+      ]
+    },
+    {
+      "id": "e9",
+      "clause_id": "c12",
+      "type": "regulation_reference",
+      "text": "CARL-01",
+      "normalized_value": null,
+      "evidence": {
+        "page_start": 1,
+        "page_end": 1,
+        "quote": "CARL-01"
+      },
+      "grounded": true,
+      "review_flag": "needs_review",
+      "review_reasons": [
+        "ocr_derived_source"
+      ]
+    },
+    {
+      "id": "e10",
+      "clause_id": "c13",
+      "type": "date",
+      "text": "March 1, 2014",
+      "normalized_value": "2014-03-01",
+      "evidence": {
+        "page_start": 1,
+        "page_end": 1,
+        "quote": "March 1, 2014"
+      },
+      "grounded": true,
+      "review_flag": "needs_review",
+      "review_reasons": [
+        "ocr_derived_source"
+      ]
+    }
+  ]
+}
